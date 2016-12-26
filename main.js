@@ -5,9 +5,14 @@ $(document).ready(function(){
 	});
 
 	$(".menu ul li ul li a").hover(function(){
-	var xyi = $(this).attr('data-description');
-	$('.description p').text(xyi);
+	var descr = $(this).attr('data-description');
+	$('.description p').text(descr);
 
+	});
+
+	$(".menu").mouseleave(function(){
+		$(this).find('ul li ul').css({'display': 'none'});
+		$(this).find('.description').css({'display': 'none'});
 	});
 
 });
